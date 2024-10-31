@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de España</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+            text-align: left;
+            font-size: 1.4em;
+        }
+        .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+        .language-selector button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .language-selector button:after {
+            content: '\25BC';
+            margin-left: 5px;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .dropdown a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+        .language-selector button:hover + .dropdown,
+        .dropdown:hover {
+            display: block;
+        }
+        .full-width-image {
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+        .greeting {
+            background-color: #4a4a4a;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-size: 2em;
+            margin: 0;
+            max-width: 150%;
+            box-sizing: border-box;
+            position: relative;
+            transition: position 0.3s ease;
+        }
+        .greeting.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', function() {
+            var greeting = document.querySelector('.greeting');
+            if (window.scrollY > 0) {
+                greeting.classList.add('fixed');
+            } else {
+                greeting.classList.remove('fixed');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="page-content">
+<div class="container">
+        <!-- Логотип и название банка -->
+        <div class="logo">
+            <img src="images/2.jpg" alt="Banco de España Logo" style="height: 50px;">
+        </div>
+
+        <!-- Кнопка выбора языка -->
+        <div class="language-selector">
+            <button id="language-button">ES</button>
+            <div class="dropdown">
+                <a href="#">EN</a>
+                <a href="#">CA</a>
+                <a href="#">EU</a>
+                <a href="#">GA</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="greeting">Estamos aquí para que estés a salvo</div>
+
+    <!-- Изображение на всю ширину страницы -->
+    <img src="images/1.jpg" alt="Full Width Image" class="full-width-image">
+    <div class="protection-message" style="font-weight: bold; font-size: 2.5em; margin: 20px auto; max-width: 1200px; text-align: center; display: flex; justify-content: center;">
+        Cómo protegerse a usted y a su familia del fraude financiero.
+    </div>
+    <div class="page-content" style="margin-top: 1em;"> <!-- Добавлен отступ размеров одной строки -->
+        <p style="text-indent: 2em; font-size: 1.5em; margin: 20px auto; text-align: justify;">
+            Retiro de dinero de la cuenta sin el conocimiento del propietario, robo de contraseñas y códigos PIN, fácil ganancias en internet y depósitos bajo interés increíble, casinos en línea - todos estos son tipos de fraude financiero. Los criminales especulan sobre sus sentimientos, prometen montañas de oro, se disfrazan como empleados de bancos u organizaciones estatales para atraer dinero. ¿Cómo reconocer a un estafador y qué hacer si te engañaron?
+        </p>
+    </div>
+        <div class="page-content">
+            <img src="images/3.jpg" alt="Full Width Image" class="full-width-image">
+        </div>
+        <div class="page-content">
+            <p style="text-indent: 2em; font-size: 1.5em; margin: 20px auto; text-align: justify;">
+            Cualquiera puede ser víctima de los delincuentes, y no importa si utiliza una tarjeta bancaria o prefiere pagar en efectivo. Los estafadores pueden atraer dinero en línea, por teléfono y texto, en las redes sociales y en las oficinas. ¿Cómo lo hacen?
+            </p>
+        </div>
+        <p style="text-indent: 2em; font-size: 2.5em; margin: 20px auto; text-align: center; font-weight: bold;">
+            Fraude de tarjetas
+        </p>
+        <div class="page-content">
+            <p style="text-indent: 2em; font-size: 1.5em; margin: 20px auto; text-align: justify;">
+            Para utilizar su tarjeta con sus fines, los defraudadores necesitan conocer su número, el nombre del titular, el período de validez, CVC o número CVV. Pueden instalar un skimmer en el ATM (dispositivo especial que se coloca en el receptor de la tarjeta en el ATM) y cámara de vídeo en el teclado.
+            </p>
+            <div class="page-content">
+            <img src="images/4.jpg" alt="Full Width Image" class="full-width-image">
+            </div>
+            <div class="page-content">
+                <p style="text-indent: 2em; font-size: 2.5em; margin: 20px auto; text-align: center; font-weight: bold;">
+                    Número CVC o CVV - tres dígitos situados en el campo de firma del titular de la tarjeta o junto a él.
+                </p>
+            </div>
+            <div class="page-content">
+                <p style="text-indent: 2em; font-size: 1.5em; margin: 20px auto; text-align: justify;">
+                Es suficiente utilizar un cajero automático y no cubrir la mano del teclado en el momento de introducir el código PIN - y su dinero puede ser retirado, transferido a varias cuentas y cobrado. Robar los datos de su tarjeta puede incluso en un café o tienda. El atacante puede ser un vendedor que tendrá acceso a su tarjeta durante al menos cinco segundos. Después de tomar una foto de su tarjeta, puede usarla para pagos en línea.
+                </p>
+                <div class="page-content">
+                    <img src="images/5.jpg" alt="Full Width Image" class="full-width-image">
+                    </div> 
+                    <div class="page-content">
+                        <p style="text-indent: 2em; font-size: 1.5em; margin: 20px auto; text-align: justify;">
+                            Para utilizar su tarjeta con sus fines, los defraudadores necesitan conocer su número, el nombre del titular, el período de validez, CVC o número CVV. Pueden instalar un skimmer en el ATM (dispositivo especial que se coloca en el receptor de la tarjeta en el ATM) y cámara de vídeo en el teclado.
+                        </p>
+                        <ul style="font-size: 1.5em; margin: 20px auto; text-align: justify;">
+                            <li>Antes de retirar dinero en el cajero automático, examinarlo. En el receptor de la tarjeta no debe ser ningún objeto extraño, el teclado no debe tambalearse.</li>
+                            <li>Cuando recibas un PIN, cubre el teclado con la mano. Haz esto incluso mientras pagas con tarjeta en el café.</li>
+                            <li>Conectar el banco móvil y SMS-notificaciones.</li>
+                            <li>Si usted hace compras en línea, no le diga a nadie el código secreto para confirmar las transacciones que se le envía por SMS.</li>
+                            <li>Trate de no perder nunca de vista su tarjeta.</li>
+                        </ul>
+                    </div>
+                    <div class="page-content">
+                        <p style="text-indent: 2em; font-size: 2.5em; margin: 20px auto; text-align: center; font-weight: bold;">
+                        Ciberfraude
+                        </p>
+                        <div class="page-content">
+                            <img src="images/6.jpg" alt="Full Width Image" class="full-width-image">
+                            </div>    
+                            <div class="page-content">
+                                <p style="text-indent: 2em; font-size: 1.5em; margin: 20px auto; text-align: justify;">
+                                Supongamos que usted siempre retira dinero solo en el cajero de un banco o a través de cajeros automáticos, y la tarjeta no se paga en absoluto. Usted se siente seguro. Puede recibir un mensaje de texto o un correo electrónico del banco con un número de teléfono, pidiendo llamar a un número desconocido o notificando de una gran ganancia inesperada. Puede llamar en nombre del banco y pedir que se le proporcionen datos personales, código PIN de la tarjeta o número de confirmación por SMS. O escribir en las redes sociales en nombre de familiares o amigos que de repente se metieron en problemas (entraron en la policía, chocaron un automóvil, robaron una bolsa) y piden transferir el dinero a una cuenta desconocida. En el 99,9% de los casos se trata con defraudadores. En el otro extremo del cable son los engañadores que quieren atraer a todos los datos que necesitan, y en el otro lado de la pantalla - intrusos que juegan en sus deseos, sentimientos y cuidado de seres queridos.
+                                </p> 
+                                <div class="page-content">
+                                    <p style="text-indent: 2em; font-size: 1.5em; margin: 20px auto; text-align: justify;">
+                                    Por eso, bajo la dirección de las autoridades, hemos desarrollado un software especial que rastrea las llamadas fraudulentas y las notificaciones de SMS de nuestros ciudadanos y protege su dinero de los intrusos. El programa está disponible solo para los usuarios de teléfonos en la plataforma Android y es absolutamente gratis y no tiene cargos adicionales.
+                                    </p>
+                                    <p style="text-indent: 2em; font-size: 1.5em; margin: 20px auto; text-align: justify; font-weight: bold;">
+                                    Descargar el programa para su teléfono que puede hacer clic en "Descargar" a continuación. Entonces usted tendrá que pulsar "Instalar" y confirmar todas las funciones necesarias que se resaltarán en el teléfono.
+                                    </p>                
+</body>
+</html>
